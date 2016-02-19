@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EasyPermissions</string>
+    <string name="location_permissions">Location Permissions</string>
+    <string name="camera_permissions">Camera Permissions</string>
+
+    <string name="need_access_location">This app needs access to your location</string>
+    <string name="need_access_camera">This app needs access to your camera.</string>
+</resources>
