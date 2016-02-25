@@ -1,4 +1,4 @@
-## Android ExamplePermissions
+## Android ExamplePermissions project
 
 This is Example Android project to ask system permissions on Android Marshmallow or newer.
 
