@@ -28,4 +28,4 @@ You can find out Support Library 23.2 on http://android-developers.blogspot.co.i
 
 ## Screenshot
 
-![screenshot_20160225-162720](https://cloud.githubusercontent.com/assets/729627/13315590/288b1fa4-dbde-11e5-82c0-54d1f4521cfe.png)
+![screenshot_20160225-235050](https://cloud.githubusercontent.com/assets/729627/13327043/d477ce16-dc1a-11e5-8f5d-ef13d11476e0.png)
