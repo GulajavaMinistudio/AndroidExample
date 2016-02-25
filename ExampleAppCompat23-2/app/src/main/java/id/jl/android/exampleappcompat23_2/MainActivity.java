@@ -3,7 +3,6 @@ package id.jl.android.exampleappcompat23_2;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -15,7 +14,6 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        fab = (FloatingActionButton) findViewById(R.id.fab);
 
         // Call bottom sheet
         View bottomSheet = findViewById(R.id.bottom_sheet);
@@ -36,9 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 // React to state change
                 Log.e("onStateChanged", "onStateChanged:" + newState);
                 if (newState == BottomSheetBehavior.STATE_EXPANDED) {
-                    fab.setVisibility(View.GONE);
+
+                    // Example fab gone
+                    //fab.setVisibility(View.GONE);
                 } else {
-                    fab.setVisibility(View.VISIBLE);
+
+                    // Example fab visible
+                    //fab.setVisibility(View.VISIBLE);
                 }
             }
             @Override
