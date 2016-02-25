@@ -2,6 +2,7 @@
     <string name="app_name">ExampleAppCompat23-2</string>
     <string name="open_bottom_sheet">Open bottom sheet</string>
     <string name="button_button_sheet">Hi this is bottom sheet</string>
-    <string name="bottom_sheet">Slide your finger from bottom screen to top</string>
-    <string name="hello_bottom_sheet">Hello, this is bottom sheet. Slide your finger from top to bottom screen</string>
+    <string name="bottom_sheet">Slide your finger from bottom screen to top to view bottom sheet</string>
+    <string name="hello_bottom_sheet">Hello, this is bottom sheet. Slide your finger from top to bottom screen to hide bottom sheet</string>
+    <string name="peek_a_boo">Peek a boo</string>
 </resources>

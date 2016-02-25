@@ -36,6 +36,11 @@
                 android:textSize="24sp"
                 android:text="@string/bottom_sheet"/>
 
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/ic_gesture_black_24dp"/>
+
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
@@ -45,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:behavior_hideable="true"
+        app:behavior_peekHeight="@dimen/peek_height"
         android:background="@color/colorYellow"
         android:padding="@dimen/activity_padding"
         app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
@@ -54,6 +60,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/peek_a_boo"/>
 
             <TextView
                 android:layout_width="match_parent"
