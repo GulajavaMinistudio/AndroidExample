@@ -39,7 +39,19 @@
             <ImageView
                 android:layout_width="128dp"
                 android:layout_height="128dp"
+                android:layout_gravity="center_horizontal"
                 app:srcCompat="@drawable/ic_gesture_black_24dp"/>
+
+            <Button
+                android:id="@+id/show_peak_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/show_button_peak"/>
+            <Button
+                android:id="@+id/hide_peak_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/hide_button_peak"/>
 
         </LinearLayout>
 
@@ -48,11 +60,11 @@
     <FrameLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:behavior_hideable="true"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        app:behavior_hideable="false"
         app:behavior_peekHeight="@dimen/peek_height"
         android:background="@color/colorYellow"
-        android:padding="@dimen/activity_padding"
         app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
         <!-- your bottom sheet layout -->
@@ -62,10 +74,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/peakview"
                 android:textSize="18sp"
-                android:text="@string/peek_a_boo"/>
+                android:text="@string/peek_a_boo"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -74,7 +89,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/button_button_sheet"/>
+                android:text="@string/button_bottom_sheet"/>
         </LinearLayout>
     </FrameLayout>
 

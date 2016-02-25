@@ -10,11 +10,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-
+    private Button showPeekButton, hidePeekButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Call bottom sheet
         View bottomSheet = findViewById(R.id.bottom_sheet);
-        BottomSheetBehavior behavior = BottomSheetBehavior.from(bottomSheet);
+        final BottomSheetBehavior behavior = BottomSheetBehavior.from(bottomSheet);
         behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
@@ -48,6 +49,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //behavior.setPeekHeight(1000);
+
+        showPeekButton = (Button) findViewById(R.id.show_peak_button);
+        hidePeekButton = (Button) findViewById(R.id.hide_peak_button);
+        final View peakView = findViewById(R.id.peakview);
+
+        showPeekButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Let's peek it, programmatically
+                behavior.setPeekHeight(peakView.getHeight());
+                peakView.requestLayout();
+            }
+        });
+
+        hidePeekButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                behavior.setPeekHeight(0);
+                if (behavior.getState() != BottomSheetBehavior.STATE_HIDDEN)
+                    behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+        });
     }
 
     @Override
